@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+opencv-python
+easyocr
+pytesseract
+Pillow
+pyzbar
+python-stdnum
+qrcode
+numpy
+deepface
+tensorflow
+mtcnn
