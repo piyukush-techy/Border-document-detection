@@ -49,8 +49,8 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://border-document-detection.vercel.app",
-        "https://border-document-detection-git-main-piyukush-techys-projects.vercel.app",
+        "http://127.0.0.1:5173",
+        "http://localhost:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
