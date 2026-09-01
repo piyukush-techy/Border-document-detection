@@ -50,6 +50,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://border-document-detection.vercel.app",
+        "https://border-document-detection-git-main-piyukush-techys-projects.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
