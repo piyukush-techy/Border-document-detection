@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
 
-const API_URL = "http://localhost:8000";
-
+const API_URL = "https://border-document-detection-1.onrender.com";
 export function useApi() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
