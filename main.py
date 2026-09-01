@@ -33,8 +33,9 @@ from modules.liveness_module import analyze_liveness
 from modules.identity_graph_module import check_identity_reuse, get_graph_stats
 from modules.risk_engine import run_risk_engine, RiskEngineInput
 from modules.audit_module import compute_document_hash, log_verification, get_recent_entries, verify_chain_integrity
-
+from fastapi.middleware.cors import CORSMiddleware
 import adapters
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("main")
@@ -43,6 +44,16 @@ app = FastAPI(
     title="Smart India Hackathon — Fake Document Detection",
     description="AI-Based Fake Identity & Document Screening System (PS 26188)",
     version="1.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://border-document-detection.vercel.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.add_middleware(
